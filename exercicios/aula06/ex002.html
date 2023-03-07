@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 6 - Ex 1</title>
+    <title>Aula 6 - Ex 2</title>
     <style>
         body {
             background-color: #7e8cbb;
@@ -19,8 +19,29 @@
     <p>Já me livrei da maldição!</p>
 
     <script>
-        var nome = window.prompt('Qual é seu nome?') // Traduzindo: a variavel 'nome' recebe o resultado do prompt que vai aparecer na janela!
-        window.alert('Prazer te conhecer, ' + nome + '!') // O sinal "+" tem a função de concatenação (relacionamento de ideias, fatos ou coisas entre si; ligação, encadeamento) nessa situação.
+        /* 
+        O valor digitado pelo usuario sera tratado como uma 'string' pelo comando. É necessário converter os números digitados pelo usuário de 'string' para 'number' para que a soma seja feita corretamente.
+        Sinal "+": (string + string) para concatenação
+        Sinal "+": (number + number) para adição
+        */
+        var n1 = Number(window.prompt('Digite um número: ')) 
+        var n2 = Number(window.prompt('Digite outro número: '))
+        /*
+        'Number.parseInt' converte a 'string' digitada pelo usuario em 'number' antes de jogar esse dado dentro de 'n1' e 'n2'.
+        'Parse' de parsear/transformar, e 'Int' de numero inteiro, que tambem poderia ser 'Float' (de 'floating point') para numeros reais/com virgula, ou tambem só 'Number' para que o próprio JS decida o que será feito (sendo essa maneira a mais atualizada).
+
+        O contrário pode ser feito de 'number' para 'string', usando 'String' ao inves de 'Number' antes do comando (sendo essa maneira a mais atualizada), ou também '.toString()' depois do comando.
+        */
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+
+        /*
+        Formatando strings:
+        var s = 'JavaScript'
+        'Eu estou aprendendo s' -> não funciona pois nao faz interpolação
+        'Eu estou aprendendo ' + s -> funciona por concatenação
+        `Eu estou aprendendo ${s}` -> funciona por template string, utilizando crase (maneira mais atualizada)
+        */
     </script>
 </body>
 </html>
