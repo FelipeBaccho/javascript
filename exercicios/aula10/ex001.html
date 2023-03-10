@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 15pt Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+    
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!'
+            a.style.background = 'yellow'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
+<!--
+    'Evento DOM' é tudo aquilo que pode acontecer com um elemento. Existem muitos eventos de elementos DOM, eles podem ser encontrados no link "developer.mozilla.org/pt-BR/docs/Web/Events". Por exemplo quando o cursor do mouse entrar na área de uma 'div' serao disparados os seguintes eventos:
+        -Cursor entra na div: "mouseenter"
+        -Cursor se move: "mousemove"
+        -Cursor clica e segura: "mousedown"
+        -Cursor solta o clique: "mouseup"
+        -Cursor clica e solta rapidamente: "click"
+        -Cursor sai da div: "mouseout"
+
+    'Função' é uma linha de códigos que será executada quando um evento ocorrer.
+        function ação(parâmetros) {
+            bloco de códigos a serem executados
+        }
+
+    Obs.: erros no codigo JS podem ser localizados ao inspecionar uma pagina, a definicao desse erro aparecera no console, onde o navegador ira identificar a parte desse codigo que ele nao reconhece.
+
+    Dica 1: digitar 'div#area' e apertar 'tab' cria automaticamente <div id="area"></div>.
+    Dica 2: clicar 'shift + alt + seta para baixo' copia o codigo para a linha de baixo.
+    Dica 3: segurar 'tab' e clicar nas setas para cima ou para baixo movimenta a linha de codigo.
+-->

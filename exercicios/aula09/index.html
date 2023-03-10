@@ -4,14 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(94, 159, 197);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="msg">Clique em mim</div>
+    <h1>Inicio dos estudos com DOM</h1>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <p>Aqui vai o resultado:</p>
+
     <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        //o zero entre colchetes seleciona o primeiro paragrafo, necessario quando o comando esta no plural e ira selecionar todos os elementos caso nao especificado
+
         /*
-        DOM ()
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
         */
+
+        var d = window.document.querySelector('div#msg') //o elemento selecionado sera da mesma maneira que em CSS
+        d.style.background = 'blue'
     </script>
 </body>
 </html>
+
+<!--
+DOM (document object model): conjunto de objetos (conhecidos como elementos DOM) dentro do navegador que dao acesso aos componentes internos do site (nao funciona no Node.js, somente no navegador). Em sua estrutura abaixo podemos ver seus elementos com 'parents' e 'childs', notar que cada pagina tera sua propria estrutura.
+
+Arvore DOM: 
+    -"window"
+        -"location"
+        -"history"
+        -"document"
+            -"html"
+                -"head"
+                    -"meta"
+                    -"title"
+                -"body"
+                    -"div"
+                    -"h1"
+                    -"p"
+                        -"strong"
+
+Metodos de acesso dos elementos DOM:
+    -Marca: getElementsByTagName()
+    -ID: getElementById()
+    -Nome: getElementsByName()
+    -Classe: getElementsByClassName()
+    -Seletor: querySelector() e querySelectorAll() (versao mais atual e recomendada)
+-->
