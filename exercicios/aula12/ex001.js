@@ -1,0 +1,1 @@
+// Condições aninhadas: quando há uma ou mais condições dentro da primeira.
