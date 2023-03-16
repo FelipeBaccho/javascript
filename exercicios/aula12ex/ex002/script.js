@@ -1,6 +1,6 @@
 function verificar() {
-    var data = new Date()
-    var ano = data.getFullYear()
+    var data = new Date() // criou uma instancia de Date
+    var ano = data.getFullYear() // funcao da classe Date 
     var formAno = document.getElementById('txtano')
     var res = document.getElementById('res')
     
@@ -9,7 +9,7 @@ function verificar() {
     } else {
         var formSex = document.getElementsByName('radsex')
         var idade = ano - Number(formAno.value)
-        var genero = ''
+        var genero = '' // vazia para ser preenchida pela função
 
         var img = document.createElement('img') // coloca imagem pelo JS, pode ser pelo HTML
         img.setAttribute('id', 'foto') // define o id da imagem
