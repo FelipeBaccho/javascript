@@ -11,8 +11,8 @@ function verificar() {
         var idade = ano - Number(formAno.value)
         var genero = ''
 
-        var img = document.createElement('img')
-        img.setAttribute('id', 'foto')
+        var img = document.createElement('img') // coloca imagem pelo JS, pode ser pelo HTML
+        img.setAttribute('id', 'foto') // define o id da imagem
 
         if (formSex[0].checked) {
             genero = 'Homem'
@@ -39,8 +39,8 @@ function verificar() {
             }
         }
 
-        res.style.textAlign = 'center'
+        res.style.textAlign = 'center' // alinha texto pelo JS
         res.innerHTML = `${genero} com ${idade} anos!`
-        res.appendChild(img)
+        res.appendChild(img) // faz a imagem aparecer no final
     }
 }
