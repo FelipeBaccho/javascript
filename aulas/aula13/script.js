@@ -1,9 +1,11 @@
 /* 
     Repetições
-        Estrutura de repetição com teste lógico no início: enquanto uma condição for verdadeira a sua função será repetida, até que a condição seja falsa.
+
+        Estrutura de repetição com teste lógico no início: enquanto uma condição for verdadeira a sua função será repetida, até que a condição seja falsa e haja seu encerramento.
                 while (condição){
                     bloco
                 }
+                
         Estrutura de repetição com teste lógico no final: a função é executada e somente depois é testada para verdadeira ou falsa, sendo verdadeira a função sera repetida.
                 do {
                     bloco
