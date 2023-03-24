@@ -17,13 +17,11 @@ function contar () {
             p = 1
         }
 
-        if (i < f) {
-            // Contagem crescente
+        if (i < f) { // Contagem crescente
             for(var c = i; c <= f; c += p) {
                 res.innerHTML += `${c} \u{1F449}`
             }
-        } else {
-            //contagem decrescente
+        } else { //contagem decrescente
             for(var c = i; c >= f; c -= p)
             res.innerHTML += `${c} \u{1F449}`
         }
